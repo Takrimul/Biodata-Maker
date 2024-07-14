@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1 th:text="${message}">Welcome to the home page!</h1>
+</header>
+<main>
+    <div class="content">
+        <section>
+            <h2>About Us</h2>
+            <p>We are a dynamic company providing excellent services to our customers. Our mission is to deliver high-quality products and ensure customer satisfaction.</p>
+        </section>
+        <section>
+            <h2>Our Services</h2>
+            <ul>
+                <li>Service 1: High-quality product delivery</li>
+                <li>Service 2: 24/7 customer support</li>
+                <li>Service 3: Customizable solutions</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feel free to reach out to us:</p>
+            <ul>
+                <li>Email: <a href="mailto:takrim9083@gmail.com">takrim9083@gmail.com</a></li>
+                <li>Phone: (123) 456-7890</li>
+            </ul>
+        </section>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+</footer>
+</body>
+</html>

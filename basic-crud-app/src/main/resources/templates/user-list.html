@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+<h2>User List</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Birthday</th>
+        <th>Address</th>
+        <th>Phone</th>
+        <th>Occupation</th>
+        <th>Institution</th>
+        <th>NID</th>
+        <th>Profile Image Path</th>
+        <th>Profile Video Path</th>
+        <th>Resume Path</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.id}">ID</td>
+        <td th:text="${user.name}">Name</td>
+        <td th:text="${user.email}">Email</td>
+        <td th:text="${user.gender}">Gender</td>
+        <td th:text="${user.birthday}">Birthday</td>
+        <td th:text="${user.address}">Address</td>
+        <td th:text="${user.phone}">Phone</td>
+        <td th:text="${user.occupation}">Occupation</td>
+        <td th:text="${user.institution}">Institution</td>
+        <td th:text="${user.NID}">NID</td>
+        <td th:text="${user.imagePath}">Profile Image Path</td>
+        <td th:text="${user.videoPath}">Profile Video Path</td>
+        <td th:text="${user.resumePath}">Resume Path</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

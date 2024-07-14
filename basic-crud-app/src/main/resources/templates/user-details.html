@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      margin: 10px 0;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<h2>User Details</h2>
+<div th:if="${user}">
+  <p><span class="label">Name:</span> <span th:text="${user.name}"></span></p>
+  <p><span class="label">Email:</span> <span th:text="${user.email}"></span></p>
+  <p><span class="label">Gender:</span> <span th:text="${user.gender}"></span></p>
+  <p><span class="label">Birthday:</span> <span th:text="${user.birthday}"></span></p>
+  <p><span class="label">Address:</span> <span th:text="${user.address}"></span></p>
+  <p><span class="label">Phone:</span> <span th:text="${user.phone}"></span></p>
+  <p><span class="label">Occupation:</span> <span th:text="${user.occupation}"></span></p>
+  <p><span class="label">Institution:</span> <span th:text="${user.institution}"></span></p>
+  <p><span class="label">NID:</span> <span th:text="${user.NID}"></span></p>
+  <p><span class="label">Profile Image Path:</span> <span th:text="${user.imagePath}"></span></p>
+  <p><span class="label">Profile Video Path:</span> <span th:text="${user.videoPath}"></span></p>
+  <p><span class="label">Resume Path:</span> <span th:text="${user.resumePath}"></span></p>
+</div>
+<div th:unless="${user}">
+  <p>User not found.</p>
+</div>
+</body>
+</html>
